@@ -1,0 +1,106 @@
+.about
+    &-block
+        margin-top: 7%
+        margin-bottom: 7%
+        display: flex
+        flex-direction: column
+    &-info
+        display: flex     
+        flex-direction: row
+        justify-content: space-around
+        &__item
+            display: flex
+            flex-direction: column
+            flex-basis: 25%
+            text-align: center
+            align-items: center
+        &__logo
+            display: flex
+            justify-content: center
+            align-items: center
+            border: 3px solid $yellow
+            width: 60px
+            height: 60px
+            background-color: lighten($gray, 45%)
+            border-radius: 50%
+            margin-bottom: 8%
+        &__title
+            font-size: 18px
+            margin: 0
+            margin-bottom: 8%
+        &__text
+            font-size: 14px
+    &-content
+        display: flex
+        margin-bottom: 7%
+        justify-content: space-around
+        &__info
+            flex-direction: column
+            flex-basis: 50%
+            font-size: 16px
+            position: relative
+            &::before
+               content: ''
+               display: flex
+               position: absolute
+               top: 7%
+               left: -4%
+               height: 80%
+               width: 2px
+               border-radius: 50%
+               background-color: $gray
+        &__main_text
+            font-weight: 900
+        &__text
+            color: $gray
+    &__title
+        color: $black
+        font-size: 80px
+        +bold
+        margin: 0px
+        padding: 0px
+        line-height: 60%
+        &::first-letter
+            font-size: 50px 
+.mark
+    font-size: 30px
+    color: $gray
+    
+@media (max-width: 768px)
+    .about
+        &-info
+            margin-top: 50px
+            flex-direction: column
+            &__logo
+                margin-bottom: 20px
+            &__title
+                margin-bottom: 20px
+            &__item
+                margin-bottom: 100px
+        &__title
+            margin-bottom: 15%
+        &-content
+            flex-direction: column
+            &__info::before
+                content: ''
+                display: block
+                position: absolute
+                top: -4%
+                left: 8%
+                width: 80%
+                height: 2px
+                background-color: $gray
+@media (max-width: 480px)
+    .mark
+        font-size: 16px
+    .about
+        &-content
+            &__info
+                font-size: 14px
+        &-block
+            margin-top: 70px
+        &__title
+            font-size: 50px
+            margin-bottom: 60px
+
+        
